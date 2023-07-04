@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>레드향 주문하기</title>
+</head>
+<body>
+  <h1>레드향 주문하기</h1>
+  <fieldset>
+    <legend>배송 정보</legend>
+    <ul>
+      <li>
+        <label for="r-name">이름</label>
+        <input type="text" id="r-name" autofocus>
+      </li>
+      <li>
+        <label for="address">배송 주소</label>
+        <input type="text" id="address" placeholder="상세주소까지 입력하세요.">
+      </li>
+      <li>
+        <label for="r-email">이메일</label>
+        <input type="email" id="r-email">
+      </li>
+      <li>
+        <label for="r-tel">연락처</label>
+        <input type="tel" id="r-tel" required placeholder="전화번호는 필수 입력입니다.">
+      </li>
+      <li>
+        <label for="r-date">배송 지정</label>
+        <input type="date" id="r-date">
+        <small>(주문일로부터 최소 3일 이후)</small>
+        
+      </li>
+      <li>
+        <label for="prod">상품 선택</label>
+        <select id="prod">
+          <optgroup>
+            <option value="스페셜 1번">선물용 3kg</option>
+            <option value="스페셜 2번">선물용 5kg</option>
+          </optgroup>
+          <option value="스페셜 3번" selected>가정용 3kg</option>
+          <option value="스페셜 4번">가정용 5kg</option>
+        </select>
+      </li>
+      <li>
+        <label for="memo">메모</label>
+        <textarea id="memo" cols="40" rows="5"></textarea>
+      </li>
+      <li>
+        <label for="pack">포장 여부</label>
+        <input type="text" id="pack" list="pack1">
+        <datalist id="pack1">
+          <option value="package">선물 포장</option>
+          <option value="unpackage">선물 포장 안함</option>
+        </datalist>
+      </li>
+    </ul>
+  </fieldset>
+  <button type="submit" >주문하기</button>
+  <button type="reset" >취소하기</button>
+</body>
+</html>

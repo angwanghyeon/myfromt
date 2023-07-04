@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>회원가입</title>
+</head>
+<body>
+  <div id="container">
+    <h1>회원가입을 환영합니다.</h1>
+    <form>
+      <fieldset>
+        <legend>사용자 정보</legend>
+        <ul>
+          <li>
+            <label for="uid">아이디</label>
+            <input type="text" id="uid" required autofocus>
+          </li>
+          <li>
+            <label for="email">이메일</label>
+            <input type="email" id="email">
+          </li>
+          <li>
+            <label for="pwd1">비밀번호</label>
+            <input type="password" id="pwd1" placeholder="소문자와 숫자, 특수 기호 등을 사용하여 8자 이상을 입력하시오">
+          </li>
+          <li>
+            <label for="pwd2">비밀번호 확인</label>
+            <input type="password" id="pwd2">
+          </li>
+          <li>
+            <label for="use-tool">가입 경로</label>
+            <select id="use-tool" multiple>
+              <option value="tool">블로그</option>
+              <option value="tool">검색</option>
+              <option value="tool">SNS</option>
+              <option value="tool">기타</option>
+            </select>
+          </li>
+        </ul>
+      </fieldset>
+      <fieldset>
+        <legend>이벤트와 새로운 소식</legend>
+        <input type="radio" name="mailing" id="mailing_y" checked>
+        <label for="mailing_y">메일 수신</label>
+        <input type="radio" name="mailing" id="mailing_n" >
+        <label for="mailing_n">메일 수신 안 함</label>
+      </fieldset>
+      <fieldset>
+        <legend>숫자 입력 필드</legend>
+        <label><input type="checkbox" value="5_3" checked>선물용 3kg</label>
+        <input type="number" min="0" max="5" readonly>개 (최대 5개)
+        <br>
+        <label>
+        <input type="checkbox" value="5_5">선물용 5kg
+        </label>
+        <input type="number" min="0" max="3" value="1">개 (최대 3개)
+        <br>
+        <label><input type="checkbox" value="f_3">가정용 3kg</label>
+        <input type="range" min="0" max="5" value="1">개 (최대 5개)
+        <br>
+        <label><input type="checkbox" value="f_5">가정용 5kg</label>
+        <input type="range" min="0" max="3" value="0">개 (최대 3개)
+      </fieldset>
+      <fieldset>
+        <legend>날짜 입력</legend>
+        <input type="date">
+        <input type="month">
+        <input type="week">
+      </fieldset>
+      <fieldset>
+        <legend>시간 입력</legend>
+        <input type="time">
+        <time datetime="2019-12-25">2019년 크리스마스</time>
+        <input type="datetime">
+        <!--datetime은 오페라에서만 지원함 -->
+        <input type="datetime-local">
+      </fieldset>
+      <div id="buttons">
+        <input type="submit" value="가입하기">
+        <input type="reset" value="가입 취소">
+      </div>
+
+      <fieldset>
+        <legend>로그인</legend>
+        <label>아이디: <input type="text" id="user_id" size="10"></label>
+        <label>비밀번호: <input type="password" id="user_pwd" size="10"></label>
+        <input type="image" src="images/login.png" alt="로그인">
+      </fieldset>
+    </form>
+    <form>
+      <input type="button" value="공지창 열기" onclick="window.open('notice.html')">
+    </form>
+  </div>
+</body>
+</html>
