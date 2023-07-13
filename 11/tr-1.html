@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    #container{
+      width: 800px;
+      margin: 20px auto;
+    }
+    .origin{
+      width: 100px;
+      height: 100px;
+      margin: 40px;
+      perspective: 200px;
+      float: left;
+      border: 1px solid black;
+    }
+    .origin>div{
+      width: 100px;
+      height: 100px;
+      background-color: orange;
+      transition: all 3s;
+    }
+    #rotate1:hover{
+      transform: rotateX(55deg);
+    }
+    #rotate2:hover{
+      transform: rotateY(55deg);
+    }
+    #rotate3:hover{
+      transform: rotateZ(55deg);
+    }
+    #rotate4:hover{
+      transform: rotate3d(2.5,1.2,-1.5, 55deg);
+    }
+    h1{
+      width: 500px;
+      height: 80px;
+      background-color: #222;
+      color: beige;
+      font-weight: bold;
+      text-align: center;
+      line-height: 80px;
+      margin: 0 auto;
+      transform: skewX(-15deg);
+    }
+  </style>
+</head>
+<body>
+  <div id="container">
+    <h1>CSS 변형 함수 익히기</h1>
+    <div class="origin">
+      <div id="rotate1"></div>
+    </div>
+    <div class="origin">
+      <div id="rotate2"></div>
+    </div>
+    <div class="origin">
+      <div id="rotate3"></div>
+    </div>
+    <div class="origin">
+      <div id="rotate4"></div>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,26 @@
+.italic{
+  font-style: italic;
+}
+.upper{
+  text-transform: capitalize;
+}
+.large{
+  font-size: 30px;
+}
+.big{
+  font-size: x-large;
+}
+.large-it-b{
+  font-size: 32px;
+  font-style: italic;
+  font: bolder;
+  letter-spacing: 2px;
+}
+.mid-large{
+  font-size: 18px;
+  font: bolder;
+}
+.sm-b{
+  font-size: small;
+  font: bolder; 
+}

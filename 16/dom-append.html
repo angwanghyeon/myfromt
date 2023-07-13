@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div id="target" onclick="addtext('동적으로 텍스트가 추가됩니다.')"
+  style="font:20px bold;">여기를 클릭하세요!</div>
+
+  <script>
+    function addtext(msg){
+      const node = document.createTextNode(msg);
+      document.getElementById('target').appendChild(node);
+    }
+  </script>
+</body>
+</html>

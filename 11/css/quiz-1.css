@@ -1,0 +1,14 @@
+img{
+  width: 500px;
+  display: inline-block;
+  margin: 200px 200px;
+  border: 1px solid #ccc;
+  border-radius: 50%;
+  box-shadow: 5px 5px 30px 2px #000;
+  animation: rotate 3s infinite;
+}
+@keyframes rotate {
+  from {transform: perspective(200px) rotateX(0deg) rotateY(0deg);}
+  50% {transform: perspective(200px) rotateX(0deg) rotateY(180deg);}
+  to {transform: perspective(200px) rotateX(0deg) rotateY(360deg);}
+}

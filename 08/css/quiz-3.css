@@ -1,0 +1,19 @@
+ul{
+  list-style-type: none;
+}
+li{
+  font-size: xx-large;
+}
+li :hover{
+  color: white;
+  background-color: black;
+}
+a{
+  display: block; /* a를 블락으로 줘야 li랑 구분이 되기 때문에 영역 구분이 쉽다? */
+  text-decoration: none;
+  background-color: gray;
+  color: black;
+  float: left;
+  padding: 10px 20px;
+}
+

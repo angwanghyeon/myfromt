@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <img src="../15/images/flower1.jpg" alt="꽃" id="image">
+  <div id="ex">div가 선언된 곳</div>
+  <a href="#" onclick="get()">div의 내용 출력하기</a> <br>
+  <a href="#" onclick="set('div의 내용 변경')">div의 내용 변경하기</a> <br>
+  <a href="#" onclick="changeImage()">이미지 바꾸기</a>
+
+  <script>
+    function get(){
+      const value = document.getElementById('ex').innerHTML;  /* 해당되는 내용을 가져오는게 innerHTML */
+      alert(value);
+    }
+    function set(msg){
+      document.getElementById('ex').innerHTML = msg;
+    }
+    function changeImage(){
+      document.getElementById('image').src = "../12/images/dish2.jpg";
+    }
+  </script>
+</body>
+</html>

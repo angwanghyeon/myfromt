@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>여러가지 표 만들기</title>
+  <style>
+    body{
+      font-size: 12px;
+      line-height: 1.5em;
+      color: #888;
+    }
+    .table_1_1{
+      width: 750px;
+      caption-side: bottom;
+      border: 1px solid gray;
+      border-collapse: separate;
+      border-spacing: 10px; /* 셀과 테이블 사이의 간격 */
+    }
+    .table_1_1 th, .table_1_1 td{
+      border: 1px solid gray;
+    }
+    .table_2_1{
+      width: 750px;
+      caption-side: bottom;
+      border: 1px solid gray;
+      border-collapse: collapse;
+    }
+    .table_2_1 th, .table_2_1 td{
+      border: 1px dotted gray;
+      padding: 5px; /* 상하 좌우 다 5px씩 먹는다 */
+    }
+    .table_2_1 td:first-child{ /* 처음 값 */
+      background-color: lightgray;
+      color: white;
+    }
+    .table_3_1{
+      width: 750px;
+      caption-side: bottom;
+      border: 1px solid gray;
+      border-collapse: collapse;
+    }
+    .table_3_1 thead tr:first-child{
+      background-color: black;
+      color: white;
+    }
+    .table_3_1 th, .table_3_1 td{
+      border: 1px solid gray;
+      padding: 5px;
+    }
+    .table_3_1 tfoot{
+      background-color: orangered;
+      color: white;
+    }
+    /* .table_3_1 tbody td:nth-child(odd){ 이렇게 표현해도 되고 밑에처럼 해도 됨*/
+    .table_3_1 tbody td:nth-child(2n-1){
+      background-color: lightgray;
+      
+    }
+  </style>
+</head>
+<body>
+  <div>
+    <h1>여러가지 표 만들기</h1>
+  </div>
+  <div class="table_1">
+    <table class="table_1_1">
+      <caption>학생 점수</caption>
+      <thead>
+        <tr>
+          <th>이름</th>
+          <th>국어</th>
+          <th>영어</th>
+          <th>총점</th>
+        <p/tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>홍길동</td>
+          <td>100</td>
+          <td>90</td>
+          <td>190</td>
+        </tr>
+        <tr>
+          <td>김자바</td>
+          <td>90</td>
+          <td>90</td>
+          <td>180</td>
+        </tr>
+        <tr>
+          <td>이자바</td>
+          <td>80</td>
+          <td>90</td>
+          <td>170</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="table_2">
+    <table class="table_2_1">
+      <caption>학생 점수</caption>
+      <thead>
+        <tr>
+          <th>이름</th>
+          <th>국어</th>
+          <th>영어</th>
+          <th>총점</th>
+        <p/tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>홍길동</td>
+          <td>100</td>
+          <td>90</td>
+          <td>190</td>
+        </tr>
+        <tr>
+          <td>김자바</td>
+          <td>90</td>
+          <td>90</td>
+          <td>180</td>
+        </tr>
+        <tr>
+          <td>이자바</td>
+          <td>80</td>
+          <td>90</td>
+          <td>170</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="table_3">
+    <table class="table_3_1">
+      <caption>학생 점수</caption>
+      <thead>
+        <tr>
+          <th>이름</th>
+          <th>국어</th>
+          <th>영어</th>
+          <th>총점</th>
+        <p/tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>홍길동</td>
+          <td>100</td>
+          <td>90</td>
+          <td>190</td>
+        </tr>
+        <tr>
+          <td>김자바</td>
+          <td>90</td>
+          <td>90</td>
+          <td>180</td>
+        </tr>
+        <tr>
+          <td>이자바</td>
+          <td>80</td>
+          <td>90</td>
+          <td>170</td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <th>합계</th>
+          <td>270</td>
+          <td>270</td>
+          <td>540</td>
+        </tr>
+      </tfoot>
+    </table>
+  </div>
+</body>
+</html>

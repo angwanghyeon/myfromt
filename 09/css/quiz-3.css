@@ -1,0 +1,43 @@
+h1{
+  display: block;
+  text-align: center;
+  background-color: #004344;
+  color: white;
+  width: auto;
+  height: 80px;
+  line-height: 80px;
+  margin: 50px 50px;
+  float: center;
+}
+h2{
+  clear: both;
+  font-style: italic;
+  text-align: center;
+}
+ul{
+  list-style: none;
+  padding-left: -100px;
+}
+li{
+  color: black;
+}
+body{
+  background-color: #02233b;
+  margin: 30px;
+  margin-top: 0;
+  padding: auto;
+  height: vh;
+}
+#container{
+  padding: 40px;
+  padding-bottom: 100%;
+  width: auto;
+  background-color: white !important;
+  background: url(../images/mic.png) no-repeat right bottom fixed;
+  margin-top: 0px;
+  margin-bottom: auto; 
+}
+legend{
+  color: red;
+  
+}

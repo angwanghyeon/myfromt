@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    const increase = function(num){ /* 무명의 리터럴로 표현 */
+      return ++num;
+    };
+    const decrease = function(num){
+      return --num;
+    };
+    const predicate = {increase,decrease}; /* 변수나 자료 구조에 넣기 */
+
+    function makeCounter(predicate){
+      let num = 0;
+
+      return function(){
+        num = predicate(num); 
+        return num;
+      };
+    }
+
+    let increaser = makeCounter(predicate.increase);
+    console.log(increaser());
+    console.log(increaser());
+
+    let decreaser = makeCounter(predicate.decrease);
+    console.log(decreaser());
+    console.log(decreaser());
+  </script>
+</body>
+</html>

@@ -1,0 +1,56 @@
+body{
+  background-color: lightgray;
+}
+ul{
+  list-style: none;
+  margin-left: -45px;
+}
+li{
+  margin: 20px;
+  width: 500px;
+}
+label{
+  width: 300px;
+  height: 50px;
+  padding: 0 10px;
+}
+#signup input:not([value=준회원]){
+ margin-bottom: 0;
+ border: none;
+}
+#signup input:not([type=tel]):not([value=준회원]){
+  border: 1px solid red;
+  border-radius: 3px;
+  font: 13px;
+  padding: 5px;
+  width: 200px;
+}
+#container{
+  border: 1px solid black;
+  background-color: white;
+  height: 800px;
+}
+#container legend{
+  font-size: x-large;
+  font-weight: bolder;
+}
+#login{
+  border: 1px solid gray;
+}
+#personal{
+  border: 1ps solid gray;
+}
+#signup fieldset:last-of-type{
+  border: none;
+  margin-bottom: 0;
+}
+#signup button{
+  border-radius: 50%;
+  margin: 20px auto;
+  width: 100px;
+  height: 50px;
+}
+#signup button:hover{
+  background-color: #222;
+  color: white;
+}

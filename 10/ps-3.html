@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>위치에 따라 요소 선택</title>
+  <style>
+    .contents{
+      border: 1px solid black;
+      width: 600px;
+      padding: 20px;
+      margin: 20px auto;
+    }
+    .contents :nth-child(3){
+      background-color: yellow;
+    }
+    .contents p:nth-of-type(4){
+      background-color: greenyellow;
+    }
+    .web{
+      text-align: center;
+    }
+    .web table tr, .web table td{
+      border: 1px solid gray;
+      width: 200px;
+      height: 0;
+      padding: 10px;
+    }
+    .web table tr:nth-child(odd){
+      background-color: #ccc;
+    }
+    .web table{
+      border: 1px solid gray;
+      width: 200px;
+      margin: 0 auto;
+      border-collapse: collapse;
+      text-align: left;
+    }
+  </style>
+</head>
+<body>
+  <div class="contents">
+    <h2>이용 안내</h2>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iusto sunt nesciunt laboriosam quae. Deleniti eos maiores suscipit reiciendis nostrum, odio veritatis tenetur. Quaerat, corrupti. Nulla enim adipisci consectetur dolore nostrum!</p>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laboriosam voluptas autem vel, ex sunt facilis dolore repellat eaque animi aperiam maxime quae ea illum natus, at placeat quidem minus. Eius.</p>
+    <h2>객실 소개</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt harum quibusdam eaque facere quas assumenda, magnam optio, esse commodi nostrum laboriosam dolores error impedit sequi, at debitis quod perspiciatis nihil.</p>
+    <h2>예약 방법 및 요금</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis est corrupti modi ratione enim vel praesentium laboriosam blanditiis doloribus fugit, inventore earum nesciunt quibusdam nihil obcaecati, asperiores delectus, quos esse.</p>
+  </div>
+<div class="web">
+  <h1>웹 개발</h1>
+    <table>
+      <tr>
+        <td>HTML</td>
+      </tr>
+      <tr>
+        <td>CSS</td>
+      </tr>
+      <tr>
+        <td>자바스크립트</td>
+      </tr>
+      <tr>
+        <td>React</td>
+      </tr>
+      <tr>
+        <td>node.js</td>
+      </tr>
+    </table>
+</div>
+</body>
+</html>

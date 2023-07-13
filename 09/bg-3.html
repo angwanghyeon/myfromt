@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>배경이미지 배치 고정</title>
+  <style>
+    body{ /* 이런 느낌으로 진짜 많이 쓴다 */
+      background-image: url(images/bg2.png);
+      background-repeat: no-repeat;
+      background-position: right top;
+      background-attachment: fixed; /* 고정 시키고 싶을때 사용하는 속성 */
+    }
+    div{
+      width: 400px;
+      height: 300px;
+      padding: 20px;
+      border: 20px solid orange;
+      margin-bottom: 20px;
+      background-image: url(images/bg3.png);
+      background-repeat: no-repeat;
+      background-position: right top;
+      overflow: auto; /* 만약에 문장이 넘어가면 이런식으로 해두면 드래그바가 생기면서 알아서 조절한다. */
+    }
+
+  </style>
+</head>
+<body>
+  <div id="bg1">
+    <h2>바빠 시리즈</h2>
+    <h3>-바쁜 학생들을 위한 빠른 학습법</h3>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Exercitationem perferendis inventore, nihil vero consequatur voluptatum laboriosam nesciunt sapiente est illum quo quasi. Velit doloribus deserunt facere voluptatibus minus architecto corporis?</p>
+  </div>
+  <div id="bg2">
+    <h2>바빠 시리즈</h2>
+    <h3>-바쁜 학생들을 위한 빠른 학습법</h3>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Exercitationem perferendis inventore, nihil vero consequatur voluptatum laboriosam nesciunt sapiente est illum quo quasi. Velit doloribus deserunt facere voluptatibus minus architecto corporis?</p>
+  </div>
+  <div id="bg3">
+    <h2>바빠 시리즈</h2>
+    <h3>-바쁜 학생들을 위한 빠른 학습법</h3>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Exercitationem perferendis inventore, nihil vero consequatur voluptatum laboriosam nesciunt sapiente est illum quo quasi. Velit doloribus deserunt facere voluptatibus minus architecto corporis?</p>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Exercitationem perferendis inventore, nihil vero consequatur voluptatum laboriosam nesciunt sapiente est illum quo quasi. Velit doloribus deserunt facere voluptatibus minus architecto corporis?</p>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Exercitationem perferendis inventore, nihil vero consequatur voluptatum laboriosam nesciunt sapiente est illum quo quasi. Velit doloribus deserunt facere voluptatibus minus architecto corporis?</p>
+  </div>
+</body>
+</html>

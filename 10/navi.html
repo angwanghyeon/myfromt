@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>가상클래스 링크스타일</title>
+  <style>
+    .navi ul li{
+      list-style: none;
+      box-sizing: border-box;
+      display: inline-block;
+      margin: 20px auto;
+      padding: 10px;
+    }
+    .navi a:link, .navi a:visited{
+      text-decoration: none;
+      width: 100px;
+      height: 30px;
+      line-height: 30px;
+      text-align: center;
+      font-size: 14px;
+      padding: 10px;
+      background-color: white;
+      color: black;
+    }
+    .navi a:hover, .navi a:focus{
+      background-color: black;
+      color: white;
+    }
+    .navi a:active{
+      background-color: red;
+    }
+  </style>
+</head>
+<body>
+  <nav class="navi">
+    <ul>
+      <li><a href="#">이용 안내</a></li>
+      <li><a href="#">객실 소개</a></li>
+      <li><a href="#">예약 방법 및 요금</a></li>
+      <li><a href="#">예약하기</a></li>
+    </ul>
+  </nav>
+</body>
+</html>
