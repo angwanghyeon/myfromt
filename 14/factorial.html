@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>while문으로 팩토리얼 만들기</title>
+  <style>
+    body{
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <h1>while문으로 팩토리얼 만들기</h1>
+  <script>
+    let n = prompt("숫자를 입력하세요.");
+    let msg = "";
+
+    if(n != null && n != "" ){ /* 취소 버튼을 누르지 않았는지 체크 */
+      let nfact = 1; /* 결과값 */
+      let i = 1;  /* 카운터 */
+
+      while(i <= n){
+        nfact *= i;
+        i++;
+      }
+      msg = n + "! = " + nfact; /* 결과값을 표시할 문자열 */
+    }
+    else{
+      msg = "숫자를 입력하지 않았습니다.";
+    }
+    document.write(msg);
+  </script>
+</body>
+</html>

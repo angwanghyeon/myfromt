@@ -1,0 +1,39 @@
+#container{
+  width: 200px;
+  margin:0 auto;
+}
+table, th, td {
+  border: 1px solid #222;
+  border-collapse: collapse;
+}
+th, td {
+  padding: 10px;
+}
+
+h1{
+  color: brown;
+}
+h2{
+  color: blue;
+}
+li{
+  color: green;
+}
+
+a{
+  text-decoration: none;
+}
+.small-line{
+  line-height: 1;
+  text-align: justify;
+}
+.big-line{
+  line-height: 2.5;
+  text-align: justify;
+}
+dt{
+  letter-spacing: 0.2em;
+}
+dd{
+  letter-spacing: 0.5em;
+}

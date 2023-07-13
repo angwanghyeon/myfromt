@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>함수의 매개 변수</title>
+  <script>
+    function multiply(x,y){
+      console.log(arguments);
+      return x * y;
+    }
+
+    let result = multiply();
+    console.log(result);
+    result = multiply(10,20);
+    console.log(result);
+    result = multiply(10,20,30,40);
+    console.log(result);
+  </script>
+</head>
+<body>
+  
+</body>
+</html>

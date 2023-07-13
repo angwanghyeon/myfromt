@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>미디어 쿼리 사용 2번째</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body{
+      background: rgb(9, 100, 160);
+    }
+    #container{
+      width: 320px;
+      margin: 50px auto;
+    }
+    .card{
+      width: 300px;
+      height: 500px;
+      margin: 20px 10px;
+      border: 1px solid #eee;
+      background-color: white;
+      position: relative;
+    }
+    .words {
+      left: 10px;
+      top: 300px;
+      position: absolute;
+      padding: 10px;
+      text-align: center;
+    }
+    @media screen and (min-width:768px) and (max-width:1439px) { /* 화면의 크기가 이렇게 될때 미디어 쿼리를 사용해서 변경사항을 준다 */
+      #container{
+        width: 570px;
+        margin: 50px auto;
+      }
+      .card{
+        width: 550px;
+        height: 250px;
+        margin: 20px 10px;
+        border: 1px solid #eee;
+        background-color: white;
+        position: relative;
+      }
+      .words{
+        left: 310px;
+        top: 50px;
+        width: 200px;
+        position: absolute;
+        padding: 10px;
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div id="container">
+    <div class="card">
+      <img src="images/1.jpg" alt="">
+      <div class="words">
+        <h2>일 분 전 만큼 먼 시간은 없다.</h2>
+        <h3>- Jim Bishop</h3>
+      </div>
+    </div>
+    <div class="card">
+      <img src="images/2.jpg" alt="">
+      <div class="words">      
+        <h2>낡은 옷은 그냥 입고 새 책을 사라</h2>
+        <h3>- Austin Phelps</h3>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>내부스크립트 사용하기</title>
+  <style>
+    body{
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <h1 id="heading">자바스크립트</h1>
+  <p id="text">위 텍스트를 클릭해 보세요</p>
+  <script> /* 이 스크립트 태그 안에 소스를 작성하는 거다. */
+    var heading = document.querySelector('#heading'); 
+    heading.onclick = function() {
+      heading.style.color = "red";
+    }
+
+    alert("안녕하세요!");
+
+
+    var reply = confirm("정말 배경 이미지를 변경하시겠습니까??");
+    console.log(reply);
+
+    var name = prompt("이름을 입력하세요.")
+    console.log(name);
+    document.write("<b><big>" + name + "</big></b>님, 환영합니다.")
+  </script>
+</body>
+</html>

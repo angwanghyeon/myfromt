@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>자동 좌석 배치</title>
+  <style>
+    body{
+      text-align: center;
+    }
+    #container{
+      width: 100%;
+    }
+    table{
+      text-align: center;
+      border-collapse: collapse;
+      margin: 0 auto;
+    }
+    tr, td{
+      border: 1px solid black;
+      padding: 10px;
+    }
+  </style>
+</head>
+<body>
+  <h1>자리 배치도</h1>
+  <script>
+    let people = prompt("입장할 인원수를 입력하세요.")
+    let row = prompt("한줄에 배치할 좌석수를 입력하세요")
+    let column = people / row ;
+    let i, j;
+      document.write("<div id='container'>");
+      document.write("<div class='table'>");
+      document.write("<table>");
+        for(i=0; i<=column; i++){
+          document.write("<tr>");
+            for(j=1; j<=row; j++){
+              let sNum = i*row + j;
+              if(sNum <= people){
+              document.write("<td>좌석 "+sNum+"</td>");
+              }
+            }
+            document.write("</tr>");
+        }
+        document.write("</table></div></div>");
+  </script>
+</body>
+</html>

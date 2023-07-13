@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>앵커 대상에 스타일 적용</title>
+  <style>
+    .navi{
+      border-bottom: 1px dotted gray;
+      width: 1000px;
+      margin: 50px auto;
+    }
+    .navi ul li{
+      list-style: none;
+      box-sizing: border-box;
+      display: inline-block;
+      margin: 20px auto;
+      padding: 10px;
+    }
+    .navi a:link{
+      color: black;
+      text-decoration: none;
+      width: 100px;
+      height: 30px;
+      line-height: 30px;
+      text-align: center;
+      font-size: 14px;
+      padding: 10px;
+      background-color: white;
+    }
+    .navi a:visited{
+      color: red;
+    }
+    .navi a:hover, .navi a:focus{
+      background-color: black;
+      color: white;
+    }
+    #intro:target{
+      background-color: blue;
+      color: white;
+    }
+    .contents{
+      box-sizing: border-box;
+      border: 1px solid black;
+      width: 450px;
+      height: auto;
+      margin: 30px auto;
+      padding: 20px;
+    }
+    #radio{
+      margin: 30px auto;
+      width: 800px;
+      border: 1px solid black;
+      border-radius: 5px;
+    }
+    #radio ul{
+      list-style: none;
+    }
+    #radio li{
+      margin-top: 20px;
+    }
+    #radio label{
+      margin: 20px;
+    }
+    #radio fieldset{
+      margin: 40px;
+    }
+    #radio input[type=submit]{
+      margin: 20px auto;
+      padding: 10px;
+      border-radius: 5px;
+      width: 80px;
+    }
+    input:checked + label{
+      color: red;
+      font-weight: 800;
+    }
+    input:not(type=radio){
+      border: 1px solid #ccc;
+      border-radius: 3px;
+      padding: 5px;
+      width: 200px;
+    }
+    input :not(type=radio):hover{
+      border-color: red;
+    }
+  </style>
+</head>
+<body>
+  <nav class="navi">
+    <ul>
+      <li><a href="#intro">이용 안내</a></li>
+      <li><a href="#room">객실 소개</a></li>
+      <li><a href="#reservation">예약 방법 및 요금</a></li>
+      <li><a href="ps-2.html">예약하기</a></li>
+    </ul>
+  </nav>
+  <div id="radio">
+    <form action="" id="signup">
+      <fieldset>
+        <legend>개인정보</legend>
+        <ul>
+          <li><label for="fullname">이름</label><input type="text" name="ps" id="fullname" required></li>
+          <li><label for="phone">연락처</label><input type="tel" name="ps" id="phone"></li>
+        </ul>
+      </fieldset>
+      <fieldset>
+        <legend>객실 형태</legend>
+        <ul>
+          <li>
+            <input type="radio" name="room" id="basic">
+            <label for="basic">기본형(최대 2인)</label>
+          </li>
+          <li><input type="radio" name="room" id="family">
+            <label for="family">가족형(최대 8인)</label>
+          </li>
+        </ul>
+      </fieldset>
+      <input type="submit" value="제출">
+    </form>
+
+  </div>
+    <div id="intro" class="contents">
+      <h2>이용 안내</h2>
+      <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestias dolorum, consequatur molestiae explicabo sint voluptatibus temporibus placeat quas sit voluptas quo maxime reprehenderit porro consectetur accusantium nesciunt quasi in voluptatum.</p>
+    </div>
+    <div id="room" class="contents">
+      <h2>객실 소개</h2>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit eaque id autem nobis recusandae, minima necessitatibus quo accusamus ipsum consequuntur obcaecati sed nostrum reiciendis incidunt. Saepe ea modi quae eaque.</p>
+    </div>
+    <div id="reservation" class="contents">
+      <h2>예약 방법 및 요금</h2>
+      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laboriosam, nemo unde? Velit quisquam quaerat repellat repellendus aliquid dignissimos nobis, eius facilis, fuga ut, eos explicabo quia! Aliquam molestiae error expedita!
+      </p>
+    </div>
+
+</body>
+</html>

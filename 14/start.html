@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>구구단</title>
+  <style>
+    body{
+      border: 1px solid black;
+    }
+    h1{
+      margin: 30px;
+    }
+    #container{
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 9fr));
+      row-gap: 20px;
+    }
+    #gugudan{
+      border: 1px solid gray;
+      margin: 20px;
+      padding-bottom: 20px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <h1>구구단</h1>
+  <script>
+    document.write("<div id='container'>");
+    let i, j;
+    for(i = 1; i<=9; i++){ 
+      document.write("<div id='gugudan'>")
+      document.write("<h2>"+i+"단</h2>");
+        for(j=1; j<=9; j++){
+          document.write(i+" X "+j+" = "+ i*j + "<br>");
+        }
+      document.write("</div>")
+    }
+    document.write("</div>")
+  </script>
+</body>
+</html>

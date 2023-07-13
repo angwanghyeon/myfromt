@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>익명 함수 만들기</title>
+  <script>
+    let sum = function (a,b){
+      return a + b;
+    }
+
+    document.write("<h1>결과 : " + sum(200,600)+"</h1>");
+
+    (function (a,b){
+      sum = a+b;
+    }(100,200));
+    document.write("<h1>즉시 실행의 결과 : "+ sum+"</h1>");
+
+    (function (){
+      let userName = prompt("이름을 입력하세요.")
+      document.write("<h1>안녕하세요 "+userName+"님!</h1>");
+    }());
+
+  </script>
+</head>
+<body>
+  
+</body>
+</html>

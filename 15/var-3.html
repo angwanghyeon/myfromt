@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>변수와 호이스팅</title>
+</head>
+<body>
+  <script>
+    var x = 10;
+
+    function displayNumber(){
+      console.log("x is " + x);
+      console.log("y is " + y); /* 호이스팅 : 선언하고 초기화 까지만 됨 */
+      var y = 20;
+    }
+    displayNumber();
+
+    var sum = addNumber(10, 20); /* 변수 선언이랑 호출 */
+    console.log(sum); 
+    sum = 50; /* 변수 재할당 */
+    console.log(sum);
+    var sum = 100;
+    console.log(sum);
+    function addNumber(num1, num2){
+      return num1+num2; /* 2개 더하기 */
+    }
+  </script>
+</body>
+</html>
