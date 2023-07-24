@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>선택자 두번째</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+  <script>
+    $(() => {
+      const divA = $('div#a').css('fontSize', '40px');
+      console.log(divA);
+
+      const divMain = $('div.main').css('fontStyle','italic');
+      console.log(divMain);
+
+      $('div h1').css('color', 'greenyellow');
+      $('div>h1').css('textDecoration', 'underline');
+      $('span, .test, #b').css('fontStyle','italic');
+    });
+  </script>
+</head>
+<body>
+  <div class="card-body content">
+    <div id="a">1. Lorem, ipsum dolor.</div>
+    <div>2. Lorem ipsum dolor sit.</div>
+    <div class="test">3. Lorem ipsum dolor sit.</div>
+    <div class="test main">4. Lorem, ipsum.</div>
+    <div><span>5. Lorem ipsum dolor sit amet.</span>
+      <h1 id="a">6. Lorem, ipsum dolor.</h1>
+    </div>
+    <div id="b">7. Lorem, ipsum.</div>
+    <div class="test">8. Lorem, ipsum dolor.</div>
+    <div class="main">9. Lorem ipsum dolor sit amet.</div>
+    <div class="test">10. Lorem ipsum dolor sit.</div>
+    <div id="a">11. Lorem, ipsum dolor.</div>
+    <div>
+      <h1>12. end</h1>
+    </div>
+  </div>
+</body>
+</html>

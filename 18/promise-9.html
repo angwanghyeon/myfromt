@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    function buyAsync(name, mymoney) {
+      return new Promise((resolve, reject) => {
+        setTimeout(() => {
+          let payment = parseInt(prompt(`${name}님, 지불하고자 하는 금액을 입력하십시오`));
+          let balance = mymoney - payment;
+          if(balance > 0){
+            console.log(`${name} : ${payment}원을 지불했습니다.`);
+            resolve(balance);
+          }else {
+            reject(`${name}: 잔액은 ${mymoney}원 입니다. 구매할 수 없습니다.`);
+          }
+        }, 1000);
+      });
+    }
+    
+    Promise.race([
+      buyAsync("park", 500),
+      buyAsync("choi", 2500),
+      buyAsync("jeong", 1500),
+    ])
+    .then((balance) => {
+      console.log(balance);
+    })
+    .catch((error) => {
+      console.log(error);
+    })    
+  </script>
+</body>
+</html>

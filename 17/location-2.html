@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div>
+    <h1>Location</h1>
+    <div>
+      <p>hash: <span id="hash"></span></p>
+      <p>host: <span id="host"></span></p>
+      <p>hostname: <span id="hostname"></span></p>
+      <p>href: <span id="href"></span></p>
+      <p>pathname: <span id="pathname"></span></p>
+      <p>search: <span id="search"></span></p>
+      <p>port: <span id="port"></span></p>
+      <p>protocol: <span id="protocol"></span></p>
+    </div>
+    <div>
+      <button onclick="google()">href</button>
+      <button onclick="naver()">assign</button>
+      <button onclick="daum()">replace</button>
+      <button onclick="location.reload()">reload</button>
+      <button onclick="location.search='name=kim&age=20'">search</button> <!-- search는 뒤에 query string만 가져온다. -->
+      <br>
+      <button onclick="goBack()">Back</button>
+      <button onclick="goForward()">Forward</button>
+      <button onclick="backTwo()">go(-2)</button>
+      <button onclick="ForwardTwo()">go(2)</button>
+
+    </div>
+  </div>
+  <script>
+    const hash = window.location.hash;
+    const host = location.host; /* window.은 생략 가능함 */
+    const hostname = location.hostname;
+    const href = location.href;
+    const pathname = location.pathname;
+    const search = location.search;
+    const port = location.port;
+    const protocol = location.protocol;
+
+    let x = document.getElementById('hash');
+    console.log(x);
+    x.innerHTML = hash;
+    document.getElementById('host').innerHTML = host; /* 위의 두줄을 한줄로 요약 */
+    document.getElementById('hostname').innerHTML = hostname;
+    document.getElementById('href').innerHTML = href;
+    document.getElementById('pathname').innerHTML = pathname;
+    document.getElementById('search').innerHTML = search;
+    document.getElementById('port').innerHTML = port;
+    document.getElementById('protocol').innerHTML = protocol;
+
+    function google(){
+      window.location.href = 'https://www.google.com';
+    }
+    function naver(){
+      location.assign('https://www.naver.com'); /* history를 가져감 */
+    }
+    function daum(){
+      location.replace('https://www.daum.net'); /* history를 가져가지 않음 */
+    }
+    function goBack(){
+      history.back();
+    }
+    function goForward(){
+      history.forward();
+    }
+    function backTwo(){
+      history.go(-2);
+    }
+    function ForwardTwo(){
+      history.go(2);
+    }
+    
+  </script>
+</body>
+</html>

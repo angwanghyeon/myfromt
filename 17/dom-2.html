@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div><!-- enter도 text node로 생각한다. -->
+    <h2>Node</h2>
+    <ul id="list"> 
+      <li>리스트 01</li>
+      <li id="second">리스트 02</li>
+      <li>리스트 03</li>
+    </ul>
+  </div>
+  <script>
+    console.log(document.childNodes);
+    console.log(document.parentNode);
+    console.log(document.childNodes[1]);
+
+    let list = document.getElementById('list');
+    console.log(list.childNodes);
+    console.log(list.parentNode);
+    
+    console.log(list.childNodes[0].nodeType);
+    console.log(list.childNodes[0].nodeName);
+    console.log('-----firstChild------');
+    console.log(list.firstChild);
+    console.log(list.firstChild.nextSibling);
+    console.log(list.firstChild.nextSibling.nextSibling);
+    console.log(list.firstChild.nextSibling.nextSibling);
+
+
+    console.log('-------lastChild-------');
+    console.log(list.lastChild);
+    console.log(list.lastChild.previousSibling);
+    console.log(list.lastChild.previousSibling.previousSibling);
+    console.log(list.lastChild.previousSibling.previousSibling.previousSibling);
+
+    console.log(list.firstChild.nextSibling.nodeType);
+    console.log(list.firstChild.nextSibling.nodeName);
+
+    console.log(list.children); /* collection 타입으로 가져온다 */
+    console.log(list.firstElementChild);
+    console.log(list.lastElementChild);
+    console.log(list.firstElementChild.nextElementSibling);
+    console.log(list.lastElementChild.previousElementSibling);
+
+    list.firstElementChild.innerHTML = 'Hello World';
+    let elem2 = document.getElementById('second');    
+    elem2.innerHTML = '여기도 수정함';
+
+    let elem3 = document.getElementsByTagName('li');
+    console.log(elem3);
+    elem3[2].innerHTML = '나도 수정됨';
+  </script>
+</body>
+</html>

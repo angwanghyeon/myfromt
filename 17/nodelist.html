@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>노드 리스트 살펴보기</title>
+  <style>
+    ul{
+      list-style: none;
+    }
+  </style>
+</head>
+<body>
+  <h1>Web programming</h1>
+  <ul id="itemlist">
+    <li>HTML</li>
+    <li>CSS</li>
+    <li>Javascript</li>
+  </ul>
+  
+
+  <script>
+    let nodelist = document.querySelectorAll('li');
+    console.log(nodelist);
+    console.log(nodelist[1]);
+    const newLi = document.createElement('li');
+    const newText = document.createTextNode('jQuery');
+    let itemlist = document.getElementById('itemlist');
+    itemlist.appendChild(newLi);
+    newLi.appendChild(newText);
+  </script>
+</body>
+</html>

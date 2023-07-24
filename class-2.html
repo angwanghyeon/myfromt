@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    function Circle(center, radius){
+      this.center = center;
+      this.radius = radius;
+      this.area = function(){ /* 이 메소드는 계속 새로운 생성자를 만들때마다 다시 생기는 메소드임 */
+        return Math.PI*this.radius*this.radius;
+      }
+    }
+
+    const c1 = new Circle(0,2);
+    console.log(c1);
+    console.log(c1.radius);
+    const c2 = new Circle({x:1, y:1}, 1.0);
+    console.log("너비 : "+c1.area());
+
+    function Circle2(center, radius){
+      this.center = center;
+      this.radius = radius;
+    }
+
+    Circle2.prototype.area = function(){
+      return Math.PI * this.radius * this.radius;
+    }
+
+    const c21 = new Circle2({x:0, y:0}, 2.0);
+    console.log("너비 : "+ c21.area());
+    
+    const c22 = new Circle2({x:1, y:2}, 3.0);
+    console.log("너비 : "+c22.area());
+
+    console.log(c21);
+    console.log(c22);
+  </script>
+</body>
+</html>

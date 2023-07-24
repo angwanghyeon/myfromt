@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chats</title>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <div id="status-bar">
+      <div class="status-bar__column">
+        <span>No Service</span>
+        <i class="fas fa-wifi"></i>
+      </div>
+      <div class="status-bar__column">
+        <span>18:43</span>
+      </div>
+      <div class="status-bar__column">
+        <span>80%</span>
+        <i class="fas fa-battery-three-quarters fa-lg"></i>
+        <i class="fas fa-bolt"></i>
+      </div>
+    </div>
+
+    <header class="screen-header">
+      <h1 class="screen-header__title">Chats</h1>
+      <div class="screen-header__icons">
+        <span class="screen-header__search"
+          ><i class="fas fa-search fa-lg"></i
+        ></span>
+        <span class="screen-header__commit"
+          ><i class="far fa-comment fa-lg"></i
+        ></span>
+        <span class="screen-header__music"
+          ><i class="fas fa-music fa-lg"></i
+        ></span>
+        <span class="screen-header__config"
+          ><a href="settings.html"><i class="fas fa-cog fa-lg"></i></a>
+          <div class="screen-header-find__badge"></div
+        ></span>
+      </div>
+    </header>
+
+    <main class="main-screen">
+      <div class="user-component">
+        <div class="user-component__column">
+          <img
+            src="image/myavator.jpg"
+            class="user-component__avatar user-component__avatar"
+            alt=""
+          />
+          <div class="user-component__text">
+            <h4 class="user-component__title">Me</h4>
+            <h6 class="user-component__subtitle">
+              Please Check My Kakao Account Info
+            </h6>
+          </div>
+        </div>
+        <div class="user-component__column">
+          <span class="user-component__time">21:22</span>
+        </div>
+      </div>
+      <div class="user-component">
+        <div class="user-component__column">
+          <img
+            src="image/son.jpg"
+            class="user-component__avatar user-component__avatar"
+            alt=""
+          />
+          <div class="user-component__text">
+            <h4 class="user-component__title">Son</h4>
+            <h6 class="user-component__subtitle">hello, HTML and CSS !</h6>
+          </div>
+        </div>
+        <div class="user-component__column">
+          <span class="user-component__time">20:18</span>
+          <div class="badge">8</div>
+        </div>
+      </div>
+      <div class="user-component">
+        <div class="user-component__column">
+          <img
+            src="image/otanijpg.jpg"
+            class="user-component__avatar user-component__avatar"
+            alt=""
+          />
+          <div class="user-component__text">
+            <h4 class="user-component__title">Otani</h4>
+            <h6 class="user-component__subtitle">밥 뭐 먹을까?</h6>
+          </div>
+        </div>
+        <div class="user-component__column">
+          <span class="user-component__time">17:36</span>
+          <div class="badge">1</div>
+        </div>
+      </div>
+      <div class="user-component">
+        <div class="user-component__column">
+          <img
+            src="image/james.jpg"
+            class="user-component__avatar user-component__avatar"
+            alt=""
+          />
+          <div class="user-component__text">
+            <h4 class="user-component__title">james</h4>
+            <h6 class="user-component__subtitle">javascript is weird</h6>
+          </div>
+        </div>
+        <div class="user-component__column">
+          <span class="user-component__time">16:45</span>
+          <div class="badge">3</div>
+        </div>
+      </div>
+    </main>
+
+    <nav class="nav">
+      <ul class="nav__list">
+        <li class="nav__btn">
+          <a class="nav__link" href="friends.html"
+            ><i class="far fa-user fa-2x"></i
+          ></a>
+        </li>
+        <li class="nav__btn">
+          <a class="nav__link" href="chats.html">
+            <span class="nav__notification badge">1</span>
+            <i class="fas fa-comment fa-2x"></i>
+          </a>
+        </li>
+        <li class="nav__btn">
+          <a class="nav__link" href="find.html">
+            <i class="fas fa-search fa-2x"></i>
+          </a>
+        </li>
+        <li class="nav__btn">
+          <a class="nav__link" href="more.html">
+            <span class="nav__eliipsis-dot"></span>
+            <i class="fas fa-ellipsis-h fa-2x"></i
+          ></a>
+        </li>
+      </ul>
+    </nav>
+    <div id="no-mobile">
+      <span>화면이 너무 큽니다</span>
+    </div>
+    <script
+      src="https://kit.fontawesome.com/6478f529f2.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

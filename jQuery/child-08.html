@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+    div.accordion{
+      width: 500px;
+      font-size: 9px;
+    }
+    div.header{
+      border: 1px solid black;
+      text-align: center;
+      padding: 2px;
+      margin-bottom: 2px;
+      background-color: plum;
+      color: yellow;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    div.content{
+      border: 1px solid #ddd;
+      padding: 5px;
+      height: 100px;
+    }
+  </style>
+  <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+  <script>
+    $(() => {
+      $('#acc > .content').hide();
+      $('#acc > .header').click(function(){
+        console.log(arguments[0].target.nextElementSibling);
+        
+        $(arguments[0].target.nextElementSibling).toggle();
+      })
+    });
+  </script>
+</head>
+<body>
+<div id="acc" class="card-body accordion">
+    <h3>어코디언 UI</h3>
+
+    <div class="header">제목1</div>
+    <div class="content">내용1</div>
+    <div class="header">제목2</div>
+    <div class="content">내용2</div>
+    <div class="header">제목3</div>
+    <div class="content">내용3</div>
+    <div class="header">제목4</div>
+    <div class="content">내용4</div>
+</div>
+
+<div class="card-body content" style="margin: 15px;">
+    어코디언 UI는 생각보다 만들기 어렵지 않다. jQuery를 이용하면 간단하게 개발이 가능하다.<br /> 
+    jQuery UI 플러그인에도 어코디언 기능이 포함되어 있지만, 간단하게는 만들어볼 수도 있다.
+</div>
+</body>
+</html>

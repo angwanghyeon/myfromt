@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Find</title>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <div id="status-bar">
+      <div class="status-bar__column">
+        <span>No Service</span>
+        <i class="fas fa-wifi"></i>
+      </div>
+      <div class="status-bar__column">
+        <span>18:43</span>
+      </div>
+      <div class="status-bar__column">
+        <span>80%</span>
+        <i class="fas fa-battery-three-quarters fa-lg"></i>
+        <i class="fas fa-bolt"></i>
+      </div>
+    </div>
+
+    <header class="screen-header">
+      <h1 class="screen-header__title">Find</h1>
+      <div class="screen-header__icons">
+        <span class="screen-header__search"
+          ><i class="fas fa-search fa-lg"></i
+        ></span>
+        <span class="screen-header__config"
+          ><a href="settings.html"><i class="fas fa-cog fa-lg"></i></a>
+          <div class="screen-header-find__badge"></div
+        ></span>
+      </div>
+    </header>
+
+    <main class="main-screen">
+      <div class="icon-row">
+        <div class="icon-row__icons">
+          <i class="fas fa-qrcode"></i><span>QR Code</span>
+        </div>
+        <div class="icon-row__icons">
+          <i class="far fa-address-book"></i><span>Add by Contacts</span>
+        </div>
+        <div class="icon-row__icons">
+          <i class="fas fa-fingerprint"></i><span>Add by Id</span>
+        </div>
+        <div class="icon-row__icons">
+          <i class="far fa-envelope"></i><span>Invite</span>
+        </div>
+      </div>
+      <div class="recommended-friends">
+        <h6 class="recommended-friends__title">Recommended-friends</h6>
+        <span>You have no recommended-friends.</span>
+      </div>
+
+      <div>
+        <div class="open-chat">
+          <div class="open-chat__header">
+            <h4 class="open-chat__title">Open Chat</h4>
+            <span
+              >Go to Opechat Home<i class="fas fa-chevron-right fa-xs"></i
+            ></span>
+          </div>
+          <div class="open-post">
+            <div class="open-post__column">
+              <h5 class="open-post__title">#YOUNHA</h5>
+              <h6 class="open-post__hashtags">#younha#album</h6>
+              <div class="open-post__members">
+                <img src="image/yoon.jpg" />
+                <span class="open-post__members-count">802 members</span>
+                <div class="divider"></div>
+                <span class="open-post__members-status">Active</span>
+              </div>
+            </div>
+            <div class="open-post__column">
+              <div class="open-post__photo">
+                <img src="image/younha1.jpg" />
+                <div class="open-post__heart-count">
+                  <i class="far fa-heart fa-xs"></i><span>531</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="open-post">
+            <div class="open-post__column">
+              <h5 class="open-post__title">#YOUNHA</h5>
+              <h6 class="open-post__hashtags">#younha#holics</h6>
+              <div class="open-post__members">
+                <img src="image/yoon.jpg" />
+                <span class="open-post__members-count">2369 members</span>
+                <div class="divider"></div>
+                <span class="open-post__members-status">Active</span>
+              </div>
+            </div>
+            <div class="open-post__column">
+              <div class="open-post__photo">
+                <img src="image/younha2.jpg" />
+                <div class="open-post__heart-count">
+                  <i class="far fa-heart fa-xs"></i><span>712</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <nav class="nav">
+      <ul class="nav__list">
+        <li class="nav__btn">
+          <a class="nav__link" href="friends.html"
+            ><i class="far fa-user fa-2x"></i
+          ></a>
+        </li>
+        <li class="nav__btn">
+          <a class="nav__link" href="chats.html">
+            <span class="nav__notification badge">1</span>
+            <i class="far fa-comment fa-2x"></i>
+          </a>
+        </li>
+        <li class="nav__btn">
+          <a class="nav__link" href="find.html">
+            <i class="fas fa-search fa-2x"></i>
+          </a>
+        </li>
+        <li class="nav__btn">
+          <a class="nav__link" href="more.html">
+            <span class="nav__eliipsis-dot"></span>
+            <i class="fas fa-ellipsis-h fa-2x"></i
+          ></a>
+        </li>
+      </ul>
+    </nav>
+    <div id="no-mobile">
+      <span>화면이 너무 큽니다</span>
+    </div>
+    <script
+      src="https://kit.fontawesome.com/6478f529f2.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

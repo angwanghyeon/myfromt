@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>node추가</title>
+  <style>
+    ul{
+      font-size: large;
+      list-style: none;
+    }
+    li{
+      margin: 10px;
+    }
+    form{
+      width: 500px;
+      height: 50px;
+    }
+    input{
+      width: 70%;
+      height: 25px;
+    }
+    input:focus{
+      border: 3px solid skyblue;
+      border-radius: 5px;
+      outline: none;
+    }
+    button{
+      border-radius: 5px;
+      margin: 2px;
+      width: 20%;
+      height: 30px;
+      background-color: black;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+<div id="container">
+    <h1>Web Programming</h1>
+    <p>공부할 주제를 기록해 보세요</p>
+    <form action="">
+      <input type="text" id="inputNode" autofocus><button onclick="newRegister(); return false;" >추가</button>
+    </form>
+    <ul id="list"></ul>
+</div>
+
+
+  <script>
+    function newRegister(){
+      let createNode = document.getElementById('inputNode');
+      let createLi = document.createElement('li');
+      let newInputText = document.createTextNode(createNode.value);
+
+      createLi.appendChild(newInputText);
+
+      let listByul = document.querySelector('#list');
+      // listByul.appendChild(createLi);
+      listByul.insertBefore(createLi, listByul.childNodes[0]);
+
+      createNode.value = "";
+
+
+      let items = document.querySelectorAll("li");
+      for(let i=0; i<items.length; i++){
+        items[i].addEventListener("click", function(){
+          if(this.parentNode){
+            this.parentNode.removeChild(this);
+          }
+        });
+      }
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    let card1 = { suit: "하트", rank: "A"}
+    console.log(card1);
+
+    function Card(suit, rank){
+      this.suit = suit;
+      this.rank = rank;
+    }
+    const card2 = new Card("클로버", "A")
+    console.log(card2);
+
+    const card3 = Object.create(Object.prototype, {
+      suit:{
+        value: "스페이드",
+        writable:true,
+        enumerable:true,
+        configurable: true
+      },
+      rank:{
+        value: "A",
+        writable:true,
+        enumerable:true,
+        configurable:true
+      }
+    });
+    console.log(card3);
+
+    /* es6 */
+    class Card2{
+      _suit = '';
+      _rank = '';
+
+      constructor(suit, rank){
+        this._suit=suit;
+        this._rank=rank;
+      }
+
+      get suit(){
+        return this._suit;
+      }
+      get rank(){
+        return this._rank;
+      }
+      set suit(value){
+        const str = value;
+        this._suit = str;
+      }
+      set rank(value){
+        const str = value;
+        this._rank = str;
+      }
+      print(){
+        console.log(`카드의 정보 ${this.suit} ${this.rank}`) /* 문자열이랑 값 가져오는거랑 둘다 쓰고 싶으면 `쓰셈 */
+      }
+    }
+    const card4 = new Card2('다이아몬드', 'A');
+    console.log(card4.print());
+
+    console.log(card4.suit);
+    console.log(card4.rank);
+
+    card4.suit = ''
+    console.log(card4.suit);
+    card4.rank ="B";
+    console.log(card4.rank);
+
+    class Foo {
+      x =1; /* public */
+      #p = 0; /* private */
+      static y = 20; /* static public*/
+      static #sp = 30; /* static private */
+
+      bar(){
+        this.#p = 10;
+        return this.#p;
+      }
+    }
+
+    const foo = new Foo();
+    console.log(foo);
+
+    console.log(foo.bar());
+    // console.log(foo.#p);
+    console.log(foo.x);
+    console.log(Foo.y);
+    console.log();
+
+    let person = {
+      'first-name' : 'gildong',
+      'last-name':'hong',
+      'gender':'mail'
+    };
+
+    console.log(person['first-name']);
+    person['first-name'] = 'java';
+    console.log(person['first-name']);
+
+    person.age = 20;
+    console.log(person.age);
+    console.log(person);
+
+    delete person.gender;
+    console.log(person);
+
+    for(let prop in person){
+      console.log(prop + ';'+ person[prop]);
+    }
+  </script>
+</body>
+</html>

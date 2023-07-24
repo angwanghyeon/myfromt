@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>문제 2번</title>
+  <style>
+    table{
+      border-collapse: collapse;
+      margin-top: 30px;
+    }
+    tr{
+      border: 1px solid black;
+    }
+    td{
+      border: 1px solid black;
+      width: 200px;
+      height: 80px;
+      text-align: center;
+      font-size: larger;
+    }
+    h1 input{
+      width: 100px;
+      height: 50px;
+      text-align: center;
+      font-size: x-large;
+    }
+    h1 button{
+      width: 100px;
+      height: 50px;
+      font-size: x-large;
+    }
+  </style>
+</head>
+<body>
+  <div id="container">
+    <h1>
+      <input type="text" id="row">행
+      <input type="text" id="column">열
+      <button onclick="makeTable(); return false;">작성</button>
+    </h1>  
+    <div id="tableContents">
+    </div>
+  </div>
+
+  <script>
+    
+    let inputRow = document.getElementById('row');
+    let inputColumn = document.getElementById('column');
+    let contents = document.getElementById('tableContents');
+    function makeTable(){
+      if(contents.hasChildNodes()){
+        contents.removeChild(contents.childNodes[0]);
+      }
+      let newTable = document.createElement('table');
+      for(let i=0; i<inputRow.value; i++){
+       let newRow = document.createElement('tr');
+        for(let j=0; j<inputColumn.value; j++){
+         let newColumn = document.createElement('td');
+         let newText =  document.createTextNode(i+', '+j);
+         newColumn.appendChild(newText);
+         newRow.appendChild(newColumn);
+        }
+        newTable.appendChild(newRow);
+      }
+      
+      contents.appendChild(newTable);
+    }
+  </script>
+</body>
+</html>

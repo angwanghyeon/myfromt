@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <form method="post" action="" name="questions" id="form1">
+    <h1>설문 조사</h1>
+    <p>
+        <label>이름 : </label>
+        <input type="text" name="name">
+    </p>
+    <p>
+        <label>성별 : </label>
+        <label><input type="radio" name="sex" value="male">남</label>
+        <label><input type="radio" name="sex" value="female">여</label>
+    </p>
+    <p>
+        <label>혈액형 : </label>
+        <select name="bloodtype" id="menu1">
+            <option>A형</option>
+            <option>B형</option>
+            <option>O형</option>
+            <option>AB형</option>
+        </select>
+    </p>
+    <p>
+        <h2>의견</h2>
+        <textarea name="opinion" rows="6" cols="80" placeholder="의견을 남겨주세요"></textarea>
+    </p>
+    <p>
+        <input type="submit" onclick="return check();" value="보내기">
+        <input type="reset" value="취소">
+    </p>
+</form>
+<script>
+function check(){
+  const menu = document.getElementById('menu1');
+  const options = document.getElementsByTagName("option");
+  console.log(menu);
+  console.log(options);
+
+  const inputs = document.querySelectorAll("#form1 input[type='radio']");
+  console.log(inputs);
+
+  //forms property 가져오기
+  console.log(document.forms[0]);
+  console.log(document.forms.form1);
+  console.log(document.forms.questions);
+  console.log(document.questions);
+
+  //forms child 객체 가져오기
+  console.log(document.forms.form1[3]);
+  console.log(document.forms.form1.bloodtype);
+  console.log(document.forms.form1.menu1);
+
+  console.log(document.forms.form1.elements[3]);
+  console.log(document.forms.form1.elements.bloodtype);
+  console.log(document.forms.form1.elements.menu1);
+  
+  const inputs2 = document.forms.form1.elements.sex;
+  let sex_selected;
+  for(let i=0; i<inputs2.length; i++){
+    if(inputs2[i].checked) sex_selected = inputs2[i].value;
+    console.log(sex_selected);
+  }
+}
+
+</script>
+</body>
+</html>

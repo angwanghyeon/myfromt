@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <p>문서열면 팝업창 오픈</p>
+  <script>
+    function openPopup(){
+      
+      let netWin = window.open("notice.html", "pop", "width=500, height=400");
+      if(netWin == null){alert("팝업차단. 해지해주세요")}
+      console.log(netWin.outerWidth);
+    }
+    function openCenter(doc,win,w,h){
+      let left = (screen.availWidth - w)/2;
+      let top = (screen.availHeight - h)/2;
+      let opt = `left = ${left}, top = ${top}, width = ${w}, height = ${h}`;
+      window.open(doc, win, opt);
+    }
+    // openPopup();
+    openCenter("notice.html", "pop", 500, 400);
+  </script>
+</body>
+</html>

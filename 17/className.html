@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>클래스 제어로 스타일 변경</title>
+  <style>
+    .changeCol{
+      color: pink;
+    }
+  </style>
+</head>
+<body>
+  <h1 id="title">Java Script 공부하기!!</h1>
+  <script>
+    let elem = document.getElementById('title');
+    elem.onmouseover = () => {
+      elem.className = "changeCol";
+    }
+    elem.onmouseout = () => {
+      elem.className = "";
+    }
+  </script>
+</body>
+</html>

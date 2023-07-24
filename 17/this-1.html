@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <img src="images/cup-1.png" alt="redcup" id="cup">
+  <script>
+    let returnSrc = document.getElementById('cup');
+    console.log(returnSrc);
+    /* 화살표 함수에서는 this의 개념이 달라지므로 function의 형태로 주는 것이 좋다. */
+    returnSrc.onclick = (event) => {
+      alert("클릭한 이미지 파일 : "+returnSrc.src);
+      console.log(returnSrc.src);
+      console.log(event.target);
+    }
+
+  </script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    const info = navigator.userAgent.toLowerCase();
+    let osname = null;
+
+    if(info.indexOf('windows') >= 0) osname = 'window'
+    else if(info.indexOf('macintosh') >= 0) osname = 'macintosh'
+    else if(info.indexOf('iphone')>=0) osname = 'iphone'
+    else if(info.indexOf('android')>=0) osname = 'android'
+    document.write(`<h1>${osname}</h1>`);
+    console.log(info);
+    console.log(osname);
+    const scr = screen;
+    const scr_w =scr.width;
+    const scr_h =scr.height;
+    const scr_aw = scr.availWidth;
+    const scr_ah = scr.availHeight;
+    document.write(`<p>너비  = ${scr_w}, 높이 = ${scr_h}
+      <br> 윈도우 작업표시 제외 너비 = ${scr_aw}, 윈도우 작업표시 제외 높이 = ${scr_ah}</p>`);
+  </script>
+</body>
+</html>

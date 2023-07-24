@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>제이쿼리 연동</title>
+  <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+  <script>
+    console.log($);
+    console.log(jQuery); /* 똑같다 */
+
+    $(document).ready(() => {console.log("One");})
+    jQuery(document).ready(()=>{console.log("Two");})
+
+    $(() => {console.log("Three");})
+    jQuery(() => {console.log("Four");})
+
+    
+  </script>
+</head>
+<body>
+
+</body>
+</html>

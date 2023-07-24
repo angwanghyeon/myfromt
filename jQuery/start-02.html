@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>제이쿼리 연습</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+  <script>
+    $(document).ready(() => {
+      $('#clickBtn').click((e) => {
+        let qty = Number($('#qty').val());
+        let cost = Number($('#cost').val());
+        let result = qty * cost;
+        $('span').html('<b>'+result+"</b>");
+    });
+  });
+  </script>
+</head>
+<body>
+  <div class="card-body">
+    <h3>내 이름은 제목</h3>
+    Qty: <input type="text" class="form-control" id="qty"><br>
+    Cost: <input type="text" class="form-control" id="cost"><br>
+    <br>
+    <div>
+      Total: <span></span>
+    </div>
+    <br>
+    <div>
+      button: <button class="btn btn-outline-primary" id="clickBtn">Click</button>
+      button: <button class="btn btn-outline-primary" id="TotalBtn">Total</button>
+    </div>
+  </div>
+</body>
+</html>

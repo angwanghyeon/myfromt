@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>이벤트 리스너 단계 확인</title>
+</head>
+<body>
+  <div id="outer">
+    <h1>outer</h1>
+    <div id="inner1">
+      <h2>inner1</h2>
+    </div>
+    <div id="inner2">
+      <h2>inner2</h2>
+    </div>
+  </div>
+
+  <script>
+    const outer = document.getElementById('outer');
+    const inner2 = document.getElementById('inner2');
+
+    outer.addEventListener('click', (e) => 
+    {console.log("outer bubbling");}, false);
+
+    outer.addEventListener("click", (e) => {
+      console.log("outer capturing");
+    }, true);
+
+    inner2.addEventListener("click", (e) => {
+      console.log("inner2 bubbling");
+    }, false); /* capturing은 true가 기본값이 아니므로 만약에 버블링 이벤트를 실현하면 안나옴*/
+  </script>
+</body>
+</html>

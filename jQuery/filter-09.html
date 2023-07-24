@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+  <script>
+    $(() => {
+      $('.content > div').css('color','lightgray')
+      .filter('.test').css('color','orange')
+      .filter('.main').css('fontSize','25px');
+
+      const x = $('.one > div').css('color', 'lightgray')
+      .filter(function(index, elem){
+        return $(elem).is('.test');
+      }).css('color', 'orange');
+      console.log(x);
+
+
+      const y = $(".two > div").css('color', 'lightgray')
+                  .not(".test").css('color', 'orange');
+                  console.log(y);
+      console.log($('.content').is('.test'));
+      console.log($('.content > div').is('.test'));
+      console.log($('.content > div').css('color','gray').is('.test'));
+
+    })
+  </script>
+</head>
+<body>
+  <div class="card-body one">
+    <div id="a">1. Lorem, ipsum dolor.</div>
+    <div>2. Lorem ipsum dolor sit.</div>
+    <div class="test">3. Lorem ipsum dolor sit.</div>
+    <div class="test main">4. Lorem, ipsum.</div>
+    <div><span>5. Lorem ipsum dolor sit amet.</span>
+      <h1 id="a">6. Lorem, ipsum dolor.</h1>
+    </div>
+    <div id="b">7. Lorem, ipsum.</div>
+    <div class="test">8. Lorem, ipsum dolor.</div>
+    <div class="main">9. Lorem ipsum dolor sit amet.</div>
+    <div class="test">10. Lorem ipsum dolor sit.</div>
+    <div id="a">11. Lorem, ipsum dolor.</div>
+    <div>
+      <h1>12. end</h1>
+    </div>
+  </div>  
+
+  <div class="card-body two">
+    <div id="a">1. Lorem, ipsum dolor.</div>
+    <div>2. Lorem ipsum dolor sit.</div>
+    <div class="test">3. Lorem ipsum dolor sit.</div>
+    <div class="test main">4. Lorem, ipsum.</div>
+    <div><span>5. Lorem ipsum dolor sit amet.</span>
+      <h1 id="a">6. Lorem, ipsum dolor.</h1>
+    </div>
+    <div id="b">7. Lorem, ipsum.</div>
+    <div class="test">8. Lorem, ipsum dolor.</div>
+    <div class="main">9. Lorem ipsum dolor sit amet.</div>
+    <div class="test">10. Lorem ipsum dolor sit.</div>
+    <div id="a">11. Lorem, ipsum dolor.</div>
+    <div>
+      <h1>12. end</h1>
+    </div>
+  </div>  
+
+  <div class="card-body content">
+    <div id="a">1. Lorem, ipsum dolor.</div>
+    <div>2. Lorem ipsum dolor sit.</div>
+    <div class="test">3. Lorem ipsum dolor sit.</div>
+    <div class="test main">4. Lorem, ipsum.</div>
+    <div><span>5. Lorem ipsum dolor sit amet.</span>
+      <h1 id="a">6. Lorem, ipsum dolor.</h1>
+    </div>
+    <div id="b">7. Lorem, ipsum.</div>
+    <div class="test">8. Lorem, ipsum dolor.</div>
+    <div class="main">9. Lorem ipsum dolor sit amet.</div>
+    <div class="test">10. Lorem ipsum dolor sit.</div>
+    <div id="a">11. Lorem, ipsum dolor.</div>
+    <div>
+      <h1>12. end</h1>
+    </div>
+  </div>  
+</body>
+</html>

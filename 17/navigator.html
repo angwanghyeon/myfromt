@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div class="card-body">
+    <h1>navigator</h1>
+    <div>
+    appcodeName: <span id="appCodeName"></span></div>
+    appName: <span id="appName"></span><br>
+    appVersion: <span id="appVersion"></span><br>
+    language: <span id="language"></span><br>
+    online: <span id="online"></span><br>
+    platform: <span id="platform"></span><br>
+    userAgent: <span id="userAgent"></span><br>
+    plugin: <span id="plugin"></span><br>
+    mimeTypes: <span id="mimeTypes"></span><br>
+  </div>
+  <script>
+    const appCodeName = window.navigator.appCodeName;
+    const appName = window.navigator.appName;
+    const appVersion = window.navigator.appVersion;
+    const language = window.navigator.language;
+    const online = navigator.online;
+    const platform = navigator.platform;
+    const userAgent = navigator.userAgent;
+    const plugin = navigator.plugin;
+    const mimeTypes = navigator.mimeTypes;
+
+    document.getElementById('appCodeName').innerHTML = appCodeName;
+    document.getElementById('appName').innerHTML = appName;
+    document.getElementById('appVersion').innerHTML = appVersion;
+    document.getElementById('language').innerHTML = language;
+    document.getElementById('online').innerHTML = online;
+    document.getElementById('platform').innerHTML = platform;
+    document.getElementById('userAgent').innerHTML = userAgent;
+    document.getElementById('plugin').innerHTML = plugin;
+    document.getElementById('mimeTypes').innerHTML = mimeTypes;
+  </script>
+</body>
+</html>

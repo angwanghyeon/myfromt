@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <a href="https://www.keduit.com" id="school">한국정보교육원</a>
+  <form action="" id="favorite">
+    <input type="checkbox" name="dog" value="pome">포메라니안<br>
+    <input type="checkbox" name="dog" value="dalma">달마시안<br>
+    <input type="checkbox" name="dog" value="cogi">웰시코기<br>
+  </form>
+  <script>
+    const anc = document.getElementById('school');
+    console.log(anc.href);
+
+    let result = [];
+    let fm = document.getElementById('favorite');
+    let list = fm.children;
+    console.log(fm);
+
+    for(let i=0; i<list.length; i++){
+      if(list[i].nodeName == "INPUT" && list[i].type == 'checkbox'){
+      // if(list[i].nodeName == "INPUT" && list[i].hasAttribute("checkbox")){
+        result.push(list[i].getAttribute("value"));
+    }
+    list[i].removeAttribute("name");
+  }
+  console.log(result);
+  console.log(result.join(", "))
+
+  anc.setAttribute("href", "https://www.google.com");
+  </script>
+</body>
+</html>
