@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    const nums = [1,2,3];
+    const chars = ["a","b","c","d"];
+    const numchars = nums.concat(chars);
+    console.log(numchars);
+
+    for(let char in numchars){
+      console.log(numchars[char]);
+    }
+    for(let char of numchars){
+      console.log(char);
+    }
+
+    const string1 = nums.join(); /* join 의 default는 ,로 연결해준다 */
+    console.log(string1); 
+    const string2 = nums.join('/');
+    console.log(string2);
+
+    const let1 = nums.push(4, 5);
+    console.log(let1+"| 배열 "+nums);
+    
+    const ret2 = nums.unshift(0);
+    console.log(ret2+"| 배열 "+nums);
+
+    const popped1 = chars.pop();
+    console.log(popped1+ "| 배열 "+ chars);
+    
+    const popped2 = chars.shift();
+    console.log(popped2+ "| 배열 "+ chars);
+
+    const newNums = nums.splice(2);
+    console.log(newNums);
+    console.log(nums);
+
+    const study = ['html', 'css', 'web', 'jquery'];
+    const newStudy = study.splice(2,1);
+    console.log(newStudy);
+    console.log(study);
+
+    const newStudy2 = study.splice(2,1,'js');
+    console.log(newStudy2);
+
+    const newStudy3 = study.slice(1);
+    console.log(newStudy3);
+    console.log(study);
+
+    const newStudy4 = study.slice(1,2);
+    console.log(newStudy4);
+    console.log(study);
+
+  </script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>문제 1번</title>
+  <style>
+    .checked{
+      text-decoration: line-through;
+      color: #ccc;
+    }
+    li{
+      list-style: none;
+      margin-bottom: 10px;
+    }
+    span{
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+  <div id="container">
+    <h1>할 일 목록</h1>
+    <div id="contents">
+      <ul>
+        <li class="nodelist"><span class="check">&check;</span>  <span class="check">할 일 1</span></li>
+        <li class="nodelist"><span class="check">&check;</span>  <span class="check">할 일 2</span></li>
+        <li class="nodelist"><span class="check">&check;</span>  <span class="check">할 일 3</span></li>
+        <li class="nodelist"><span class="check">&check;</span>  <span class="check">할 일 4</span></li>
+        <li class="nodelist"><span class="check">&check;</span>  <span class="check">할 일 5</span></li>
+      </ul>
+    </div>
+    </div>
+  <script>
+    let checkList = document.querySelectorAll('.check');
+    let nodeList = document.getElementsByClassName('nodelist');
+    let takeLi = document.querySelectorAll('li');
+
+      for(let i=0; i<checkList.length; i++){
+        checkList[i].addEventListener("click", function(){
+          if(this.parentNode){
+          this.className = "checked";
+          }         
+        });
+      }
+  </script>
+</body>
+</html>

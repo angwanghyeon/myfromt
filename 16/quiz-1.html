@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <p>현재 시각 <span id="current" class="display"></span></p>
+  <script>
+    setInterval(displayNow, 1000); /* 1초마다 시간 계산 함수 실행 */
+
+    function displayNow(){ /* 시간 계산 함수 */
+      let time = new Date();
+      let orod = "";
+      let orodtime = 0;
+      if(time.getHours()>12){
+        orod = "오후"
+        orodtime = time.getHours()-12;
+      }else{
+        orod = "오전"
+        orodtime = time.getHours();
+
+      }
+      let currentTime = ( orod+" "
+      +orodtime
+      +":"+time.getMinutes()+":"+time.getSeconds());
+      document.querySelector("#current").innerHTML = currentTime;
+      /* 현재 시간 표시 */
+    }
+  </script>
+</body>
+</html>

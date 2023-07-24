@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body {
+      height: 600px;
+    }
+    #mycanvas{}
+  </style>
+  <script>
+    window.onload = function () {
+      const BALLNUM = 200;
+      const R = 5;
+      const TIME_INTERVAL = 33;
+      const BACK_ALPHA = 0.3;
+      const canvas = document.getElementById("mycanvas");
+      const ctx = canvas.getContext("2d");
+      console.log(ctx);
+
+      const wall = {
+        left: 0,
+        right: canvas.width,
+        top: 0,
+        bottom: canvas.height
+      };
+
+      let balls = [];
+      for (let i = 0; i < BALLNUM; i++) {
+        balls[i] = new Ball(wall.right / 2, wall.bottom / 2, R);
+        balls[i].setVelocityAsRandom(2, 7).setColorAsRandom(50, 225);
+      }
+      setInterval(drawFrame, TIME_INTERVAL);
+
+      function drawFrame(){
+        ctx.fillStyle = `rgba(0,0,0,${BACK_ALPHA})`;
+        ctx.fillRect(0, 0, canvas.width, canvas.height);
+        for(let i = 0; i<balls.length; i++){
+          
+          balls[i].move().collisionWall(wall).draw(ctx);
+        }
+        
+        
+      }
+      console.log(balls[1]);
+    }
+
+    function Ball(x, y, r, vx, vy, color) {
+      this.x = x;
+      this.y = y;
+      this.r = r;
+      this.vx = vx;
+      this.vy = vy;
+      this.color = color;
+    }
+    Ball.prototype = {
+      setVelocityAsRandom: function (vmin, vmax) {
+        let v = vmin + Math.random() * (vmax - vmin);
+        let t = 2 * Math.PI * Math.random();
+
+        this.vx = v * Math.cos(t);
+        this.vy = v * Math.sin(t);
+        return this;
+      },
+      setColorAsRandom: function (min, max) {
+        let r = Math.floor(min + Math.random() * (max - min));
+        let g = Math.floor(min + Math.random() * (max - min));
+        let b = Math.floor(min + Math.random() * (max - min));
+        this.color = `rgb(${r},${g},${b})`;
+        
+        // return color = `rgb(${r},${g},${b})`;
+        return this;
+      },
+      draw: function(ctx){
+        ctx.fillStyle = this.color;
+        ctx.beginPath();
+        ctx.arc(this.x, this.y, this.r, 0, 2*Math.PI, true);
+        ctx.fill();
+
+        // this.ctx = ctx;
+        return this;
+      },
+      move: function () {
+        this.x += this.vx;
+        this.y += this.vy;
+        return this;
+      },
+      collisionWall: function (wall) {
+        if (this.x - this.r < wall.left) {
+          this.x = wall.left + this.r;
+          if (this.vx < 0) this.vx *= -1;
+        }
+        if (this.x + this.r > wall.right) {
+          this.x = wall.right - this.r;
+          if (this.vx > 0) this.vx *= -1;
+        }
+        if (this.y - this.r < wall.top) {
+          this.y = wall.top + this.r;
+          if (this.vy < 0) this.vy *= -1;
+        }
+        if (this.y + this.r > wall.bottom) {
+          this.y = wall.bottom - this.r;
+          if (this.vy > 0) this.vy *= -1;
+        }
+        return this;
+      }
+    }
+
+  </script>
+</head>
+
+<body>
+  <canvas id="mycanvas" width="640" height="480"></canvas>
+</body>
+
+</html>

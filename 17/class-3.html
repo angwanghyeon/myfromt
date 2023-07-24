@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    class Person{
+      name = '';
+      constructor(name){
+        this._name = name;
+      }
+
+      sayHello(){
+        console.log(`안녕하세요! ${this._name}`);
+      }
+    }
+    const me = new Person('홍길동');
+    me.sayHello();
+    console.log(me);
+    console.log('me: ', me instanceof Person);
+    console.log('Person: ', Object.getPrototypeOf(Person).constructor === Person);
+    console.log('Person: ', Person);
+    console.log('me: ', me);
+
+    console.log('Object.getPrototypeOf(Person).constructor: ', Object.getPrototypeOf(Person).constructor);
+    console.log('Object.getPrototypeOf(me).constructor: ', Object.getPrototypeOf(me).constructor);
+    
+
+
+    
+  </script>
+</body>
+</html>

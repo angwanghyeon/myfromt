@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>공 지</title>
+  <style>
+    #container{
+      width: 600px;
+      margin: 10px auto;
+      padding: 10px;
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="container">
+    <h1>이벤트 공지</h1>
+    <img src="/images/doit.jpg" alt="두잇">
+    <p>
+      <a href="main2.html" onclick="loadUrl(this.href); return false">자세히 보기</a>
+    </p>
+  </div>
+  <script>
+    function loadUrl(url) {
+      window.opener.location = url;
+      // window.close();
+    };
+  </script>
+</body>
+</html>

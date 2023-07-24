@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    function sleep(callback){
+      setTimeout(() => {callback()}, 1000);
+    }
+
+    sleep(function(){
+      console.log("A");
+      sleep(function(){
+        console.log("B");
+        sleep(function(){
+          console.log("C");
+        })
+      })
+    }); //콜백 지옥 계속 쓰려면 ㅈ댐 걍
+  </script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>로또 추첨 발표</title>
+  <style>
+    h1{
+      border: 1px solid black;
+      padding: 10px;
+      background-color: #eee;
+    }
+  </style>
+</head>
+<body>
+  <h1>당첨자 발표</h1>
+
+  <script>
+    const seed = prompt("전체 응모자 수 :","");
+    const pickNum = prompt("당첨자 수 : ","");
+    let picked = [];
+
+    for(let i=0; i<pickNum; i++){
+      let pickedArrNum;
+      do{
+      pickedArrNum = Math.floor((Math.random() * seed) + 1);
+      }while(picked.includes(pickedArrNum))
+      picked.push(pickedArrNum);
+    }
+    picked.sort(function(a,b){
+      if(a>b) return 1;
+      if(a<b) return -1;
+    });
+    document.write("전체 응모자 수 : "+seed+"명");
+    document.write("<br>당첨자 : "+picked.join('번, ')+"번");
+  </script>
+</body>
+</html>

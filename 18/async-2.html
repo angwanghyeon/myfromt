@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    function delay(ms){
+      return new Promise((resolve) => setTimeout(resolve, ms));
+    }
+
+    async function getApple(){
+      await delay(2000);
+      return "apple";
+    }
+
+    async function getBanana(){
+      await delay(1000);
+      return "banana";
+    }
+
+    getApple().then(console.log);
+    getBanana().then(console.log);
+  </script>
+</body>
+</html>

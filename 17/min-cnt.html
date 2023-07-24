@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1>일정시간 간격으로 숫자 증가</h1>
+  <p id="uptime">콘솔 확인</p>
+  <p id="downtime">콘솔 확인</p>
+  <button type="button" id="stop">증가 정지</button>
+  <button type="button" id="stop2">감소 정지</button>
+  <!-- <button type="button" onclick="clearInterval(auto_1)">증가 정지</button>
+  <button type="button" onclick="clearInterval(auto_2)">감소 정지</button> -->
+  <script>
+    let addNum = 0;
+    let subNum = 999;
+    
+    const auto_1 = setInterval(function(){
+      addNum++;
+      console.log('addNum : ', addNum);
+      document.getElementById('uptime').innerHTML = addNum;
+      
+    },1000)
+    const auto_2 = setInterval(function(){
+      subNum--;
+      console.log('subNum : ', subNum);
+      document.getElementById('downtime').innerHTML = subNum;
+    },1000)
+    document.getElementById('stop').onclick = () =>{
+      clearInterval(auto_1);
+    }
+    document.getElementById('stop2').onclick = () =>{
+      clearInterval(auto_2);
+    }
+  </script>
+</body>
+</html>

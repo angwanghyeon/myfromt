@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>라이트박스 효과 만들기</title>
+  <style>
+    #container{
+      margin: 0;
+      padding: 0;
+    }
+    .row{
+      text-align: center;
+    }
+    ul{
+      margin: 0;
+      padding: 0;
+    }
+    ul li{
+      list-style: none;
+      display: inline-flex;
+      flex-wrap: wrap;
+      text-align: center;
+    }
+    .pic{
+      width: 200px;
+    }
+    #lightbox{
+      display: none;
+      text-align: center;
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.7);
+      top: 0;
+      left: 0;
+    }
+    #lightbox img{
+      width: 60%;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      border: 5px solid #eee;
+    }
+  </style>
+</head>
+<body>
+  <div id="container">
+    <div class="row">
+      <ul>
+        <li><img src="images/tree-1-thumb.jpg" data-src="images/tree-1.jpg" class="pic"></li>
+        <li><img src="images/tree-2-thumb.jpg" data-src="images/tree-2.jpg" class="pic"></li>
+        <li><img src="images/tree-3-thumb.jpg" data-src="images/tree-3.jpg" class="pic"></li>
+        <br>
+        <li><img src="images/tree-4-thumb.jpg" data-src="images/tree-4.jpg" class="pic"></li>
+        <li><img src="images/tree-5-thumb.jpg" data-src="images/tree-5.jpg" class="pic"></li>
+        <li><img src="images/tree-6-thumb.jpg" data-src="images/tree-6.jpg" class="pic"></li>
+      </ul>
+    </div>
+    <div id="lightbox">
+      <img src="images/tree-1.jpg" alt="" id="lightboxImage">
+    </div>
+  </div>
+<script>
+  let sumnail = document.getElementsByClassName('pic');
+  let callLightbox = document.getElementById('lightbox');
+  let callBoximage = document.getElementById('lightboxImage');
+
+  for(let i=0; i<sumnail.length; i++){
+    sumnail[i].addEventListener("click", showLightbox);
+  }
+  function showLightbox(){
+    callLightbox.style.display = "block";
+    let location = this.getAttribute("data-src");
+    callBoximage.setAttribute("src", location);
+  }
+  callLightbox.onclick = () => {
+    callLightbox.style.display = "none";
+  }
+</script>
+</body>
+</html> 

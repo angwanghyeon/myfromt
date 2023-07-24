@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>이벤트 처리</title>
+</head>
+<body>
+  <img src="images/cup-1.png" alt="red-cup" id="cup">
+  <script>
+    var cup = document.getElementById("cup");
+    // cup.onclick = () => { /* 바로 함수 사용 */
+    //   alert("이미지를 클릭했습니다.");
+    // }
+      cup.onclick = changePic;
+      function changePic(){
+        cup.src = "images/cup-2.png";
+      }
+  </script>
+</body>
+</html>

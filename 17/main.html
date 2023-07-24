@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>팹업창</title>
+</head>
+<body>
+  <p>문서열면 팝업창</p>
+  <script> 
+    popWin = window.open("event-result.html", "event", "with=750", "height = 600");
+    popWin.opener = self;
+  </script>
+</body>
+</html>
